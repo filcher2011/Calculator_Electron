@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p id="input">0</p>
+        <p id="output">0</p>
+        <div class="BlockBtn">
+            <button onclick="addNum(1)">1</button>
+            <button onclick="addNum(2)">2</button>
+            <button onclick="addNum(3)">3</button>
+            <button onclick="addChar('*')" id="char">*</button>
+            <button onclick="addNum(4)">4</button>
+            <button onclick="addNum(5)">5</button>
+            <button onclick="addNum(6)">6</button>
+            <button onclick="addChar('+')" id="char">+</button>
+            <button onclick="addNum(7)">7</button>
+            <button onclick="addNum(8)">8</button>
+            <button onclick="addNum(9)">9</button>
+            <button onclick="addChar('-')" id="char">-</button>
+            <button onclick="cOutput()" id="clear">C</button>
+            <button onclick="addNum(0)">0</button>
+            <button onclick="resultInput()" id="result">=</button>
+            <button onclick="addChar('/')" id="char">/</button>
+        </div>
+        
+        <script>
+            let input = window.document.querySelector('#input');
+            let output = window.document.querySelector('#output');
+
+            let LastChar = false;
+
+            function add(number) {
+                if (input.innerText === '0') {
+                    input.innerText = number
+                } else {
+                    input.innerText += number
+                }
+            }
+
+            function addNum(number) {
+                if (input.innerText.length <= 10) {
+                    add(number);
+                    LastChar = false;
+                    resultOutput();
+                }
+            }
+
+            function addChar(char) {
+                if (LastChar === false) {
+                    add(char);
+                    LastChar = true;
+                }
+            }
+
+            function resultOutput() {
+                output.innerText = eval(input.innerText);
+            }
+
+            function resultInput() {
+                input.innerText = output.innerText;
+                output.innerText = 0;
+            }
+
+            function cOutput() {
+                input.innerText = 0;
+                output.innerText = 0;
+            }
+
+        </script>
+
+        <script>
+            require('render.js');
+        </script>
+    </body>
+</html>

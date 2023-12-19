@@ -1,0 +1,12 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Easy calculator by filcher2011",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "build": "electron-packager ."
+  },
+  "author": "filcher2011",
+  "license": "ISC"
+}

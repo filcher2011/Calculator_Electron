@@ -1,0 +1,66 @@
+body {
+    background-image: linear-gradient(#334c5e, 60%, #0c1216);
+    user-select: none;
+    margin: 0;
+}
+
+p {
+    text-align: center;
+    word-break: break-all;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 88%;
+    padding: 3vh 8% 0 4%;
+}
+
+#input {
+    text-align: right;
+    height: 12vh;
+    font-size: 10vh;
+    color: #fff;
+}
+
+#output {
+    height: 4vh;
+    font-size: 8vh;
+    text-align: right;
+    color: #2fc45c;
+}
+
+#BlockBtn {
+    margin-left: 3%;
+}
+
+#char {
+    background-color: #cb6500;
+}
+
+#result {
+    background-color: #cb6500;
+}
+
+#clear {
+    color: rgb(114, 0, 0)
+}
+
+button {
+    width: 20%;
+    margin: 2%;
+    float: left;
+    font-size: 7vh;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 1vh 0;
+}
+
+button:hover {
+    background-color: #212121;
+}
+
+button:active {
+    background-color: #383838;
+    color: green;
+}
